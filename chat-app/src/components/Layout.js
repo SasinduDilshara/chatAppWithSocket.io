@@ -3,7 +3,7 @@ import io from 'socket.io-client'
 import { USER_CONNECTED, LOGOUT } from '../Events.js'
 import LoginForm from './LoginForm'
 import { Socket } from 'dgram'
-import ChatContainer from './ChatContainer'
+import ChatContainer from './chatContainer'
 const socketUrl = 'http://localhost:3231/'  // backend link
 
 export default class Layout extends Component {
@@ -41,7 +41,7 @@ export default class Layout extends Component {
 
     }
 
-    logOut = () => {
+    logout = () => {
 
         const { socket } = this.state
         socket.emit(LOGOUT)
